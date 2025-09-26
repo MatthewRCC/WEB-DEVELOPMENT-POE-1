@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SHAWCO — Students' Health & Welfare Centres Organisation</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <meta name="description" content="SHAWCO - student-run NGO providing health and education outreach in Cape Town.">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="SHAWCO logo" class="logo">
+        <span class="brand-text">SHAWCO</span>
+      </a>
+      <nav class="main-nav" aria-label="Primary">
+        <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">☰</button>
+        <ul id="primary-menu" class="nav-list">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="health.html">Health</a></li>
+          <li><a href="get-involved.html">Get Involved</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1>Improving lives in Cape Town through health and education outreach</h1>
+        <p>Student-run programmes supporting communities with healthcare, tutoring, and volunteer opportunities.</p>
+        <p class="cta-row">
+          <a class="btn" href="get-involved.html">Volunteer</a>
+          <a class="btn secondary" href="about.html">Learn More</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="features container" aria-labelledby="what-we-do">
+      <h2 id="what-we-do">What we do</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Education Programmes</h3>
+          <p>Tutoring, after-school support, and resources for learners in underserved communities.</p>
+          <p><a href="education.html" class="link">Read more →</a></p>
+        </article>
+
+        <article class="card">
+          <h3>Health Programmes</h3>
+          <p>Community clinics, mobile health screenings and health education campaigns.</p>
+          <p><a href="health.html" class="link">Read more →</a></p>
+        </article>
+
+        <article class="card">
+          <h3>Volunteer & Donate</h3>
+          <p>Students and donors play a key role — find out how to help.</p>
+          <p><a href="get-involved.html" class="link">Get involved →</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container sitemap-preview" aria-label="Site map preview">
+      <h2>Site Structure (Sitemap)</h2>
+      <ul>
+        <li>Home
+          <ul>
+            <li>About</li>
+            <li>Education Programmes</li>
+            <li>Health Programmes</li>
+            <li>Get Involved</li>
+            <li>Contact</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> SHAWCO — Students' Health & Welfare Centres Organisation</p>
+      <p>Designed as a student project &middot; <a href="contact.html">Contact</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // small script for nav toggle and year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const navToggle = document.getElementById('nav-toggle');
+    const menu = document.getElementById('primary-menu');
+    navToggle.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
+      navToggle.setAttribute('aria-expanded', !expanded);
+      menu.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>
